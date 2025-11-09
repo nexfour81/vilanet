@@ -20,11 +20,7 @@
   </header>
 
   <section class="hero">
-    <div class="container">
-      <h1>Internet de Verdade com Velocidade e Estabilidade</h1>
-      <p>Chega de travamentos! Conecte-se com a Vila Real Telecom.</p>
-      <a href="https://api.whatsapp.com/send?phone=5581993831906&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20de%20internet%20da%20Vila%20Real%20Telecom." target="_blank" class="btn-whatsapp">💬 Fale Conosco no WhatsApp</a>
-    </div>
+   
   </section>
 
   <section id="planos" class="planos">
@@ -64,6 +60,14 @@
     </div>
   </section>
 
+   <div class="container">
+      <h1>Internet de Verdade com Velocidade e Estabilidade</h1>
+      <p>Chega de travamentos! Conecte-se com a Vila Real Telecom.</p>
+      <br><br>
+      <a href="https://api.whatsapp.com/send?phone=5581993831906&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20de%20internet%20da%20Vila%20Real%20Telecom." target="_blank" class="btn-whatsapp">💬 Fale Conosco no WhatsApp</a>
+    </div>
+
+  
   <img src="image.png" alt="Mascote Vila Real" class="mascote" />
 
   <footer id="contato">
@@ -114,9 +118,63 @@ body {
 
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
 </style>
 </html>
+
+
+<script>
+// Lista de banners
+const banners = [
+  "banner1.jpg", // 🖼️ primeiro banner
+  "banner2.jpg"  // 🖼️ segundo banner
+];
+
+let atual = 0; // banner atual
+
+function trocarBanner() {
+  const hero = document.querySelector(".hero");
+  atual = (atual + 1) % banners.length; // alterna entre 0 e 1
+  hero.style.backgroundImage = `url('${banners[atual]}')`;
+}
+
+// troca a cada 10 segundos (10000ms)
+setInterval(trocarBanner, 10000);
+</script>
+
+<style>
+/* ============================
+   HERO ROTATIVO
+   ============================ */
+.hero {
+  position: relative;
+  background-image: url('banner1.jpg'); /* imagem inicial */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 40px 20px;
+  transition: background-image 1.5s ease-in-out; /* transição suave */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45); /* camada escura p/ contraste */
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+</style>
