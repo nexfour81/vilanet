@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vila Real Telecom - Internet Fibra</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <img src="logo.png" alt="Vila Real Telecom" class="logo" />
+      <nav>
+        <a href="index.html" class="ativo">Início</a>
+        <a href="planos.html">Planos</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+    </div>  
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Internet de Verdade com Velocidade e Estabilidade</h1>
+      <p>Chega de travamentos! Conecte-se com a Vila Real Telecom.</p>
+      <a href="https://api.whatsapp.com/send?phone=5581993831906&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20de%20internet%20da%20Vila%20Real%20Telecom." target="_blank" class="btn-whatsapp">💬 Fale Conosco no WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="planos" class="planos">
+    <div class="container">
+      <h2>Nossos Planos</h2>
+      <div class="cards">
+        <div class="card">
+          <h4 style="color: white">Plano Basic</h4>
+          <h2 ><p class="mega">100 Mega</p></h2>
+          <p class="preco">R$ 59,90/mês</p>
+          <ul>
+            <li style="text-align: center;">Internet 100% Fibra</li>
+          </ul>
+          <button onclick="enviarWhatsApp('100 Mega', '59,90')">Assine Já</button>
+        </div>
+
+        <div class="card destaque">
+          <h4 style="color: white">Plano Ultra</h4>
+         <h2> <p class="mega">300 Mega</p></h2>
+          <p class="preco">R$ 69,90/mês</p>
+          <ul>
+            <li style="text-align: center;">Internet 100% Fibra</li>
+          </ul>
+          <button onclick="enviarWhatsApp('300 Mega', '69,90')">Assine Já</button>
+        </div>
+
+        <div class="card">
+          <h4 style="color: white">Plano Premium</h4>
+          <h2><p class="mega">500 Mega</p></h2>
+          <p class="preco">R$ 79,90/mês</p>
+          <ul>
+            <li style="text-align: center;">Internet 100% Fibra</li>
+          </ul>
+          <button onclick="enviarWhatsApp('500 Mega', '79,90')">Assine Já</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <img src="image.png" alt="Mascote Vila Real" class="mascote" />
+
+
+  <footer id="contato">
+    <div class="container">
+      <p>© 2025 Vila Real Telecom — Todos os direitos reservados.</p>
+       <!-- Ícone Instagram -->
+            <a href="https://www.instagram.com/_vilarealtelecom?igsh=MWVkODhqN2R4MXMyag==" target="_blank" aria-label="Instagram">
+                <img src="insta (2).png" alt="Instagram" class="social-icon">
+            </a>    
+    </div>
+    
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+.logo {
+  width: 200px;   /* aumenta a largura */
+  height: auto;   /* mantém a proporção */
+}
+
+</style>

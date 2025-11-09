@@ -1,0 +1,382 @@
+:root {
+  --azul: #0055aa;
+  --laranja: #ff6b00;
+  --bg: #f5f7fb;
+  --branco: #fff;
+  --texto: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--texto);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: var(--branco);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--azul);
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, var(--azul), var(--laranja));
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Planos */
+.planos {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.planos h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--laranja);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card.destaque {
+  border: 2px solid var(--laranja);
+}
+
+.card h2 {
+  color: var(--azul);
+  margin-bottom: .5rem;
+}
+
+.card .preco {
+  font-size: 1.5rem;
+  color: var(--azul);
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.card button {
+  background: var(--azul);
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: var(--branco);
+  color: var(--azul);
+ 
+}
+
+/* Sobre */
+.sobre {
+  background: var(--azul);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.sobre p {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-planos {
+  background: linear-gradient(to right, var(--laranja), var(--azul));
+  padding: 4rem 1rem;
+  color: white;
+  text-align: center;
+}
+.hero-planos h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero-planos p {
+  font-size: 1.1rem;
+}
+nav a.ativo {
+  color: var(--laranja);
+}
+
+
+.hero-contato {
+  background: linear-gradient(to right, var(--azul), var(--laranja));
+  padding: 4rem 1rem;
+  color: white;
+  text-align: center;
+}
+
+.contato {
+  padding: 3rem 1rem;
+  background: var(--bg);
+}
+
+.contato-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.formulario, .info {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background: var(--laranja);
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background: var(--azul);
+}
+
+.info h2 {
+  margin-bottom: 1rem;
+}
+
+.mapa iframe {
+  border-radius: var(--radius);
+  margin-top: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contato-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.hero-sobre {
+  background: linear-gradient(to right, var(--azul), var(--laranja));
+  padding: 4rem 1rem;
+  color: white;
+  text-align: center;
+}
+
+.sobre {
+  padding: 3rem 1rem;
+  background: var(--bg);
+}
+
+.sobre-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.sobre .texto h2 {
+  color: var(--azul);
+  margin-top: 1.5rem;
+
+}
+
+.sobre .texto p {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  line-height: 1.6;
+  color: #111;
+
+}
+
+.sobre .texto ul {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.sobre .texto li {
+  background: var(--card);
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: #111;
+}
+
+.sobre .imagem img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.cta {
+  background: var(--azul);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cta .btn-whatsapp {
+  background: var(--laranja);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.cta .btn-whatsapp:hover {
+  background: #fff;
+  color: var(--azul);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ícones das redes sociais */
+.social-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-left: 6px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    display: inline-flex;
+}
+.mascote {
+  position: fixed;       /* fica fixo na tela */
+  bottom: 20px;          /* distância da parte inferior */
+  right: 20px;           /* distância da lateral direita */
+  width: 150px;          /* tamanho do mascote */
+  height: auto;          /* mantém proporção */
+  z-index: 9999;         /* fica acima de tudo */
+  pointer-events: none;  /* não interfere nos cliques */
+  animation: flutuar 3s ease-in-out infinite; /* animação suave */
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
