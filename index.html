@@ -18,7 +18,7 @@
       </nav>
     </div>  
   </header>
-
+<br><br><br>
   <section class="hero">
    <div class = "banner-text">
       <h1>Conectando Você ao Futuro com Internet de Fibra Óptica</h1>
@@ -33,8 +33,8 @@
     <div class="container">
       <h2>Nossos Planos</h2>
       <div class="cards">
-        <div class="card">
-          <h4 style="color: white">Plano Basic</h4>
+        <div class="card-glass">
+          <h4">Plano Basic</h4>
           <h2><p class="mega">100 Mega</p></h2>
           <p class="preco">R$ 59,90/mês</p>
           <ul>
@@ -43,8 +43,8 @@
           <button onclick="enviarWhatsApp('100 Mega', '59,90')">Assine Já</button>
         </div>
 
-        <div class="card destaque">
-          <h4 style="color: white">Plano Ultra</h4>
+        <div class="card-neon">
+          <h4>Plano Ultra</h4>
           <h2><p class="mega">300 Mega</p></h2>
           <p class="preco">R$ 69,90/mês</p>
           <ul>
@@ -53,8 +53,8 @@
           <button onclick="enviarWhatsApp('300 Mega', '69,90')">Assine Já</button>
         </div>
 
-        <div class="card">
-          <h4 style="color: white">Plano Premium</h4>
+        <div class="card-gradient">
+          <h4">Plano Premium</h4>
           <h2><p class="mega">500 Mega</p></h2>
           <p class="preco">R$ 79,90/mês</p>
           <ul>
@@ -72,10 +72,39 @@
       <br><br>
       <a href="https://api.whatsapp.com/send?phone=5581993831906&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20de%20internet%20da%20Vila%20Real%20Telecom." target="_blank" class="btn-whatsapp">💬 Fale Conosco no WhatsApp</a>
     </div>
+<!-- Botão com imagem do WhatsApp -->
+<button id="whatsapp-button" aria-label="WhatsApp">
+  <img src="whatsapp1.png" alt="logo whatsapp" class="whatsapp" />
+</button>
 
-  
-  <img src="image.png" alt="Mascote Vila Real" class="mascote" />
+<script>
+  // Quando clicar na imagem, abre o WhatsApp
+  document.getElementById("whatsapp-button").addEventListener("click", function () {
+    window.open(
+      "https://api.whatsapp.com/send?phone=5581993831906&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20de%20internet%20da%20Vila%20Real%20Telecom.",
+      "_blank"
+    );
+  });
+</script>
+<style>
+/* Estilo do botão e imagem do WhatsApp */
+#whatsapp-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
 
+.whatsapp {
+  width: 60px;   /* ajuste o tamanho conforme quiser */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1); /* efeito de zoom suave */
+}
+</style>
   <footer id="contato">
     <div class="container">
       <p>© 2025 Vila Real Telecom — Todos os direitos reservados.</p>
@@ -132,3 +161,117 @@ body {
 </html>
 
 
+<script>
+  let ultimoScroll = 0;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    const scrollAtual = window.scrollY;
+
+    // Se o usuário rolar para baixo, esconde o header
+    if (scrollAtual > ultimoScroll && scrollAtual > 50) {
+      header.classList.add("hidden");
+    } 
+    // Se rolar para cima, mostra novamente
+    else {
+      header.classList.remove("hidden");
+    }
+
+    ultimoScroll = scrollAtual;
+  });
+</script>
+<style>
+.card-neon {
+  background: #fff;
+  border: 2px solid #ff6b00;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 146, 4, 0.4);
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  color: #0f172a;
+}
+
+.card-neon:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(255, 146, 4, 0.8);
+}
+
+.card-neon button {
+  background: #0055aa;
+  border: none;
+  color: #0f172a;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  transition: background 0.3s;
+}
+
+.card-neon button:hover {
+  background: #0f172a;
+  color: #00e5ff;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card-glass:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.card-glass button {
+  background: #25d366;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card-glass button:hover {
+  background: #128c7e;
+}
+
+
+.card-gradient {
+  background: linear-gradient(145deg, #ff6b00, #ffcc00);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-gradient:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card-gradient button {
+  background: #fff;
+  color: #ff6b00;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card-gradient button:hover {
+  background: #ff6b00;
+  color: #fff;
+}
+
+</style>

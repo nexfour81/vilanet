@@ -367,14 +367,14 @@ button[type="submit"]:hover {
     opacity: 0.8;
     display: inline-flex;
 }
-.mascote {
+.whatsapp {
   position: fixed;       /* fica fixo na tela */
   bottom: 20px;          /* distância da parte inferior */
   right: 20px;           /* distância da lateral direita */
-  width: 150px;          /* tamanho do mascote */
+  width: 100px;          /* tamanho do mascote */
   height: auto;          /* mantém proporção */
   z-index: 9999;         /* fica acima de tudo */
-  pointer-events: none;  /* não interfere nos cliques */
+  pointer-events: auto;  /* permite cliques */
   animation: flutuar 3s ease-in-out infinite; /* animação suave */
 }
 
@@ -387,4 +387,38 @@ button[type="submit"]:hover {
   text-align: center;
 }
 
+/* Header fixo com transição suave */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Classe usada para esconder o header */
+header.hidden {
+  transform: translateY(-100%);
+}
+
+/* Responsividade — mantém o estilo bonito no celular */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 5px 0;
+  }
+}
 
