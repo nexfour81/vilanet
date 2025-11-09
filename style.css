@@ -337,6 +337,7 @@ button[type="submit"]:hover {
   display: inline-block;
   margin-top: 1rem;
   font-weight: 600;
+
 }
 
 .cta .btn-whatsapp:hover {
@@ -381,6 +382,8 @@ button[type="submit"]:hover {
   50% { transform: translateY(-10px); }
 }
 
-
+#whatsapp {
+  text-align: center;
+}
 
 
