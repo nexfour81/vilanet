@@ -33,7 +33,7 @@
       <div class="cards">
         <div class="card">
           <h4 style="color: white">Plano Basic</h4>
-          <h2 ><p class="mega">100 Mega</p></h2>
+          <h2><p class="mega">100 Mega</p></h2>
           <p class="preco">R$ 59,90/mês</p>
           <ul>
             <li style="text-align: center;">Internet 100% Fibra</li>
@@ -43,7 +43,7 @@
 
         <div class="card destaque">
           <h4 style="color: white">Plano Ultra</h4>
-         <h2> <p class="mega">300 Mega</p></h2>
+          <h2><p class="mega">300 Mega</p></h2>
           <p class="preco">R$ 69,90/mês</p>
           <ul>
             <li style="text-align: center;">Internet 100% Fibra</li>
@@ -64,27 +64,62 @@
     </div>
   </section>
 
- <img src="image.png" alt="Mascote Vila Real" class="mascote" />
-
+  <img src="image.png" alt="Mascote Vila Real" class="mascote" />
 
   <footer id="contato">
     <div class="container">
       <p>© 2025 Vila Real Telecom — Todos os direitos reservados.</p>
-       <!-- Ícone Instagram -->
-            <a href="https://www.instagram.com/_vilarealtelecom?igsh=MWVkODhqN2R4MXMyag==" target="_blank" aria-label="Instagram">
-                <img src="insta (2).png" alt="Instagram" class="social-icon">
-            </a>    
+      <a href="https://www.instagram.com/_vilarealtelecom?igsh=MWVkODhqN2R4MXMyag==" target="_blank" aria-label="Instagram">
+        <img src="insta (2).png" alt="Instagram" class="social-icon">
+      </a>    
     </div>
-    
   </footer>
 
   <script src="script.js"></script>
 </body>
-</html>
+
+<!-- CSS embutido -->
 <style>
-.logo {
-  width: 200px;   /* aumenta a largura */
-  height: auto;   /* mantém a proporção */
+/* ============================
+   CONFIGURAÇÃO DO FUNDO GERAL
+   ============================ */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+
+  /* Camadas de fundo */
+  background-image:
+    linear-gradient(
+      rgba(49, 175, 192, 0.6),
+      rgba(15, 72, 122, 0.7)
+    ),
+    url('ChatGPT Image 9 de nov. de 2025, 19_00_42.png'); /* Coloque aqui o caminho correto da imagem */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #0f172a; /* Fallback azul escuro */
+
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+  min-height: 100vh;
 }
 
+/* ============================
+   OUTROS AJUSTES
+   ============================ */
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 </style>
+</html>
