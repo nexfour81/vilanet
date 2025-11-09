@@ -20,7 +20,13 @@
   </header>
 
   <section class="hero">
-   
+   <div class = "banner-text">
+      <h1>Conectando Você ao Futuro com Internet de Fibra Óptica</h1>
+      <p>Velocidade, Estabilidade e Atendimento de Qualidade para sua Casa ou Empresa.</p>
+      </div>
+      <div class="iamgem-banner">
+        <p>aqui vai ficar o boneco</p>
+      </div>
   </section>
 
   <section id="planos" class="planos">
@@ -126,55 +132,3 @@ body {
 </html>
 
 
-<script>
-// Lista de banners
-const banners = [
-  "banner1.jpg", // 🖼️ primeiro banner
-  "banner2.jpg"  // 🖼️ segundo banner
-];
-
-let atual = 0; // banner atual
-
-function trocarBanner() {
-  const hero = document.querySelector(".hero");
-  atual = (atual + 1) % banners.length; // alterna entre 0 e 1
-  hero.style.backgroundImage = `url('${banners[atual]}')`;
-}
-
-// troca a cada 10 segundos (10000ms)
-setInterval(trocarBanner, 10000);
-</script>
-
-<style>
-/* ============================
-   HERO ROTATIVO
-   ============================ */
-.hero {
-  position: relative;
-  background-image: url('banner1.jpg'); /* imagem inicial */
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  padding: 40px 20px;
-  transition: background-image 1.5s ease-in-out; /* transição suave */
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.45); /* camada escura p/ contraste */
-  z-index: 0;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 2;
-}
-</style>

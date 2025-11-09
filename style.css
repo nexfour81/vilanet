@@ -53,8 +53,8 @@ nav a {
 
 /* Hero */
 .hero {
-  background: linear-gradient(to right, var(--azul), var(--laranja));
-  color: white;
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
   padding: 5rem 1rem;
 }
@@ -68,6 +68,7 @@ nav a {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+
 
 .btn-whatsapp {
   background: #25d366;
