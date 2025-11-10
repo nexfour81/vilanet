@@ -9,7 +9,7 @@
 <body>
   <header>
     <div class="container header-content">
-      <a href="index.html"><img src="logovilareal.png" alt="Vila Real Telecom" class="logo" /></a>
+      <a href="index.html"><img src="logo.png" alt="Vila Real Telecom" class="logo" /></a>
       <nav>
         <a href="index.html">Início</a>
         <a href="contato.html">Contato</a>
@@ -71,7 +71,20 @@
          class="btn-whatsapp" target="_blank">💬 Fale conosco</a>
     </div>
   </section>
-    <img src="image.png" alt="Mascote Vila Real" class="mascote" />
+   <!-- Botão com imagem do WhatsApp -->
+<button id="whatsapp-button" aria-label="WhatsApp">
+  <img src="whatsapp1.png" alt="logo whatsapp" class="whatsapp" />
+</button>
+
+<script>
+  // Quando clicar na imagem, abre o WhatsApp
+  document.getElementById("whatsapp-button").addEventListener("click", function () {
+    window.open(
+      "https://api.whatsapp.com/send?phone=5581993831906&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20de%20internet%20da%20Vila%20Real%20Telecom.",
+      "_blank"
+    );
+  });
+</script>
 
   <footer>
     <div class="container">
@@ -86,3 +99,63 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
+<!-- CSS embutido -->
+<style>
+/* ============================
+   CONFIGURAÇÃO DO FUNDO GERAL
+   ============================ */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+
+  /* Camadas de fundo */
+  background-image:
+    linear-gradient(
+      rgba(49, 175, 192, 0.6),
+      rgba(15, 72, 122, 0.7)
+    ),
+    url('ChatGPT Image 9 de nov. de 2025, 19_00_42.png'); /* Coloque aqui o caminho correto da imagem */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #0f172a; /* Fallback azul escuro */
+
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+  min-height: 100vh;
+
+}
+
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+</style>
+
+<script>
+  let ultimoScroll = 0;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    const scrollAtual = window.scrollY;
+
+    // Se o usuário rolar para baixo, esconde o header
+    if (scrollAtual > ultimoScroll && scrollAtual > 50) {
+      header.classList.add("hidden");
+    } 
+    // Se rolar para cima, mostra novamente
+    else {
+      header.classList.remove("hidden");
+    }
+
+    ultimoScroll = scrollAtual;
+  });
+</script>
