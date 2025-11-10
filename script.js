@@ -14,7 +14,7 @@ function enviarMensagem(e) {
   const mensagem = document.getElementById("mensagem").value;
 
   const texto = `Olá! Meu nome é ${nome} (%20${email}) e gostaria de falar com a Vila Real Telecom. %0A%0A${mensagem}`;
-  const telefone = "5581984754758";
+  const telefone = "5581993831906";
   const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${texto}`;
 
   window.open(url, "_blank");

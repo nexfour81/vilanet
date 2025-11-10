@@ -219,7 +219,7 @@ nav a.ativo {
 
 
 .hero-contato {
-  background: linear-gradient(to right, var(--azul), var(--laranja));
+  
   padding: 4rem 1rem;
   color: white;
   text-align: center;
@@ -227,7 +227,6 @@ nav a.ativo {
 
 .contato {
   padding: 3rem 1rem;
-  background: var(--bg);
 }
 
 .contato-content {
@@ -456,4 +455,116 @@ header.hidden {
   .hero {
     padding: 2rem;
   }
+}
+
+/* Estilo do botão e imagem do WhatsApp */
+#whatsapp-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.whatsapp {
+  width: 60px;   /* ajuste o tamanho conforme quiser */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1); /* efeito de zoom suave */
+}
+
+
+.card-neon {
+  background: #fff;
+  border: 2px solid #ff6b00;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 146, 4, 0.4);
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  color: #0f172a;
+}
+
+.card-neon:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(255, 146, 4, 0.8);
+}
+
+.card-neon button {
+  background: #0055aa;
+  border: none;
+  color: #0f172a;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  transition: background 0.3s;
+}
+
+.card-neon button:hover {
+  background: #0f172a;
+  color: #00e5ff;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card-glass:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.card-glass button {
+  background: #25d366;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card-glass button:hover {
+  background: #128c7e;
+}
+
+
+.card-gradient {
+  background: linear-gradient(145deg, #ff6b00, #ffcc00);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-gradient:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card-gradient button {
+  background: #fff;
+  color: #ff6b00;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card-gradient button:hover {
+  background: #ff6b00;
+  color: #fff;
 }
