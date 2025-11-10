@@ -51,13 +51,19 @@ nav a {
   font-weight: 600;
 }
 
-/* Hero */
 .hero {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 5rem 25rem;
+
+  border: 2px solid #00e5ff;     /* linha azul neon */
+  border-radius: 15px;           /* bordas arredondadas */
+  background: rgba(255, 255, 255, 0.05); /* leve transparência interna */
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3); /* brilho suave */
 }
+
 
 .hero h1 {
   font-size: 2rem;
@@ -434,3 +440,20 @@ header.hidden {
   }
 }
 
+.foguete {
+  width: 50px;   /* define a largura */
+  height: auto;   /* mantém proporção */
+  display: block;
+  margin: 0 auto; /* centraliza se quiser */
+}
+.mascote{
+  width: 300px; /*largura do mascote*/
+  height: auto;
+
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem;
+  }
+}
